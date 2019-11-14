@@ -41,7 +41,7 @@ class Song
   end
 
   def self.alphabetical
-    sorted_songs = self.all.sort
+    sorted_songs = self.all.sort_by { |s| s.name }
     sorted_songs
   end
 end
