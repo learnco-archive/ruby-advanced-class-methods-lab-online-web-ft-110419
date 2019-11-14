@@ -46,9 +46,14 @@ class Song
     sorted_songs
   end
 
-  def self.create_from_filename(filename)
+  def self.new_from_filename(filename)
     # parse song
     parts = filename.split(" - ")
+    artist = parts[0]
+    name = parts[1].chomp(".mp3")
+
     # save song instance
+    song = self.create(name, artist)
+    song
   end
 end
