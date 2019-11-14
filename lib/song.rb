@@ -58,7 +58,9 @@ class Song
     name = parts[1].chomp(".mp3")
 
     # save song instance
-    song = self.create(name, artist)
+    # song = self.create(name, artist)
+    song = self.new_by_name(name)
+    song.artist_name = artist
     song
   end
 
