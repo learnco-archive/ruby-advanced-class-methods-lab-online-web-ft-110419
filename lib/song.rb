@@ -47,7 +47,7 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    # parse song 
+    # parse song
     parts = filename.split(" - ")
     # save song instance
   end
