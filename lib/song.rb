@@ -39,4 +39,9 @@ class Song
     song = self.find_by_name(name)
     self.create_by_name(name) if !song
   end
+
+  def self.alphabetical
+    sorted_songs = self.all.sort
+    sorted_songs
+  end
 end
