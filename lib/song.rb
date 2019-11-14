@@ -10,13 +10,6 @@ class Song
     self.class.all << self
   end
 
-  # def self.create(name, artist_name)
-  #   song = self.new
-  #   song.name = name
-  #   song.artist_name = artist_name
-  #   song.save
-  #   song
-  # end
   def self.create
     song = self.new
     song.save
@@ -58,7 +51,6 @@ class Song
     name = parts[1].chomp(".mp3")
 
     # save song instance
-    # song = self.create(name, artist)
     song = self.new_by_name(name)
     song.artist_name = artist
     song
