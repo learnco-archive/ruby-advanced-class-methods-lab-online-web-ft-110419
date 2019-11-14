@@ -45,4 +45,10 @@ class Song
     sorted_songs = self.all.sort_by { |s| s.name }
     sorted_songs
   end
+
+  def self.create_from_filename(filename)
+    # parse song 
+    parts = filename.split(" - ")
+    # save song instance
+  end
 end
